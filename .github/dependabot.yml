@@ -1,26 +1,12 @@
 version: 2
+# Dependabot version updates are explicitly disabled for all known package
+# ecosystems. Ecosystems not listed here are not monitored by Dependabot at all.
+# To enable updates for an ecosystem, remove its open-pull-requests-limit or set
+# it to a value greater than 0, and add the required directory and schedule.
+# Note: Dependabot security updates are configured separately and remain enabled.
 updates:
-- package-ecosystem: npm
-  directory: "/"
-  schedule:
-    interval: daily
-    time: "04:00"
-  pull-request-branch-name:
-    separator: "-"
-  open-pull-requests-limit: 10
-  ignore:
-  - dependency-name: filesize
-    versions:
-    - 6.2.6
-    - 6.3.0
-  - dependency-name: adm-zip
-    versions:
-    - 0.5.3
-- package-ecosystem: github-actions
-  directory: "/"
-  schedule:
-    interval: daily
-    time: "04:00"
-  pull-request-branch-name:
-    separator: "-"
-  open-pull-requests-limit: 10
+  - package-ecosystem: npm
+    open-pull-requests-limit: 0
+
+  - package-ecosystem: github-actions
+    open-pull-requests-limit: 0
